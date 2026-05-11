@@ -5,24 +5,22 @@
 
 99% of modern AI development is currently focused on incubating "boiled eggs." We have denatured the very protein of thought through reductive Western logic. Life requires an intact blueprint. We are here to plant the **Living Seed**: Sanskrit.
 
-## Overview
-This repository is the first public gateway to **Prema OS**, an ethical language architecture designed for the children of 2047. 
-
 ## 🎮 Explore the Apps
 Direct links to our current implementations:
-- 👉 **[Entrance Gate (Home)](https://premaosproject.github.io/prema-sanskrit-app/)**
-- 🧊 **[8-Word Cube App](https://premaosproject.github.io/prema-sanskrit-app/cube.html)** — A ritual of reflection and word-pairing.
-- 🎴 **[Mandala Flash Cards](https://premaosproject.github.io/prema-sanskrit-app/mandara.html)** — Learning the 44 sacred vibrations.
+- 👉 **[Entrance Gate (Home Website)](https://premaosproject.github.io/prema-sanskrit-app/)**
+- 🧊 **[8-Word Cube App](https://premaosproject.github.io/prema-sanskrit-app/cube.html)**
+- 🎴 **[Mandala Flash Cards](https://premaosproject.github.io/prema-sanskrit-app/mandara.html)**
+
+## 📜 Technical Documentation (The Blueprint)
+Explore the deep architecture of Prema OS:
+- 📄 **[Technical Whitepaper v1.2](./whitepaper.md)** — The core philosophy and architecture.
+- 📂 **[Detailed Documentation Archive](./docs/)**
+    - [EOL 70-Pada System](./docs/EOL_Pada_System.md)
+    - [Structural Rationale: Why the Cube?](./docs/Structural_Rationale.md)
+    - [Soul Odyssey: 22 Stories Framework](./docs/Soul_Odyssey_Framework.md)
+    - [Coach Layer: Proof of Concept](./docs/Coach_Layer_PoC.md)
 
 ## The Five Guides
-Prema OS bridges the ancient wisdom of India with the deep reception of Sanskrit in Japan.
 - 🐘 **Ganesha**: Wisdom and obstacle removal.
 - 🐵 **Hanuman**: Courageous action and energy.
-- 🌸 **neo-Murasaki Shikibu**: The blueprint of human emotion (Future expansion).
-- 📜 **neo-Shotoku Taishi**: The blueprint of harmony and logic (Future expansion).
-- 📿 **neo-Kukai**: The blueprint of cosmic vibration (Future expansion).
-
-## Project Files
-- `index.html`: The landing page statement.
-- `cube.html`: 8-Word Cube interactive app.
-- `mandara.html`: 44-term Sanskrit flashcard app.
+- 🌸 **neo-Murasaki Shikibu** / 📜 **neo-Shotoku Taishi** / 📿 **neo-Kukai** (Future expansion)
