@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanskrit Mandala — Prema OS Flash Cards</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif+JP:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #eef0f4;
+  --panel: #ffffff;
+  --text: #111111;
+  --muted: #444444;
+  --border: #b0b8c4;
+  --prem: #7c5cbf; /* Prema OS Theme Purple */
+
+  --prema:  #8b0038;
+  --dharma: #003478;
+  --nila:   #005030;
+  --sthita: #5c3000;
+  --rta:    #2e006e;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 400;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  font-size: 16px;
+}
+
+/* ── HEADER ── */
+header {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-bottom: 2px solid #c0bab0;
+  background: #fff;
+  position: relative;
+}
+.back-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: var(--prem);
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid var(--prem);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.back-link:hover {
+  background: var(--prem);
+  color: #fff;
+}
+.site-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 0.05em;
+}
+.site-sub {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* ── PROGRESS BAR ── */
+.progress-wrap {
+  max-width: 860px;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem;
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.progress-bar {
+  height: 8px;
+  background: #d0ccc4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--prem);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+/* ── TABS ── */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  padding: 1.8rem 1rem 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.tab {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 2px solid #999;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.18s;
+}
+.tab:hover { background: #f0f0f0; border-color: #555; color: #111; }
+.tab.active { color: #fff; font-weight: 700; }
+.tab[data-family="all"].active    { background:#444;   border-color:#444; }
+.tab[data-family="prema"].active  { background:var(--prema);  border-color:var(--prema); }
+.tab[data-family="dharma"].active { background:var(--dharma); border-color:var(--dharma); }
+.tab[data-family="nila"].active   { background:var(--nila);   border-color:var(--nila); }
+.tab[data-family="sthita"].active { background:var(--sthita); border-color:var(--sthita); }
+.tab[data-family="rta"].active    { background:var(--rta);    border-color:var(--rta); }
+
+/* ── CONTROLS ── */
+.controls {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  padding: 1rem 1rem 0;
+  flex-wrap: wrap;
+}
+.ctrl-btn {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border: 2px solid #888;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.18s;
+}
+.ctrl-btn:hover { background: #222; color: #fff; border-color: #222; }
+
+/* ── MAIN ── */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ── FAMILY SECTION ── */
+.family-section { margin-bottom: 3.5rem; }
+.family-section[data-family="prema"]  { --fam-color: var(--prema); }
+.family-section[data-family="dharma"] { --fam-color: var(--dharma); }
+.family-section[data-family="nila"]   { --fam-color: var(--nila); }
+.family-section[data-family="sthita"] { --fam-color: var(--sthita); }
+.family-section[data-family="rta"]    { --fam-color: var(--rta); }
+
+.family-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--fam-color);
+  border-left: 5px solid var(--fam-color);
+  padding-left: 1rem;
+  margin-bottom: 0.3rem;
+}
+.family-desc {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  padding-left: calc(1rem + 5px);
+  margin-bottom: 1.2rem;
+}
+
+/* ── CLUSTER LABEL ── */
+.cluster-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 1.5rem 0 0.8rem;
+  padding: 0.7rem 0 0.4rem;
+  border-top: 2px solid #bbb;
+}
+
+/* ── CARDS GRID ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+.cards-grid.sub {
+  padding-left: 1.5rem;
+  border-left: 3px solid #ccc;
+  margin-left: 0.5rem;
+}
+
+/* ── FLIP CARD ── */
+.card-wrap {
+  perspective: 900px;
+  height: 140px;
+  cursor: pointer;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-wrap.flipped .card-inner { transform: rotateY(180deg); }
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: 2px solid #bbb;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 0.7rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card-wrap:hover .card-face {
+  border-color: #888;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.card-back {
+  transform: rotateY(180deg);
+  border-left: 5px solid var(--fam-color);
+}
+
+/* ── CARD TEXT ── */
+.c-sanskrit {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--fam-color);
+  line-height: 1.3;
+}
+.c-kana {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 0.3rem;
+}
+.c-hint {
+  font-size: 0.65rem;
+  color: #999;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.c-jp {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+}
+.c-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111;
+  margin-top: 0.2rem;
+}
+
+/* ── MASTERED ── */
+.card-wrap.mastered .card-face {
+  opacity: 0.35;
+}
+.master-btn {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: 'Noto Serif JP', serif;
+  background: transparent;
+  border: 2px solid #bbb;
+  color: #666;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.18s;
+}
+.master-btn:hover { background: var(--fam-color); color: #fff; border-color: var(--fam-color); }
+.card-wrap.mastered .master-btn { background: var(--fam-color); color: #fff; border-color: var(--fam-color); }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-link">← Home</a>
+  <div class="site-title">Mandala of the Soul</div>
+  <div class="site-sub">Sanskrit Flash Cards · Prema OS · <span id="total-count">44</span> Terms</div>
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span>Mastered / 覚えた語</span>
+      <span id="prog-text">0 / 44</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
+  </div>
+</header>
+
+<div class="tabs">
+  <button class="tab active" data-family="all">All / すべて</button>
+  <button class="tab" data-family="prema">Prema / 愛</button>
+  <button class="tab" data-family="dharma">Dharma / 義務</button>
+  <button class="tab" data-family="nila">Nīla / 浄化</button>
+  <button class="tab" data-family="sthita">Sthita / 知性</button>
+  <button class="tab" data-family="rta">Ṛta / 秩序</button>
+</div>
+
+<div class="controls">
+  <button class="ctrl-btn" id="btn-expand">Flip All / すべて開く</button>
+  <button class="ctrl-btn" id="btn-collapse">Close All / すべて閉じる</button>
+  <button class="ctrl-btn" id="btn-reset">Reset / リセット</button>
+</div>
+
+<main id="main-content"></main>
+
+<script>
+const DATA = [
+  { family:'prema', familyLabel:'Prema Family', familyDesc:'Love · Source / 愛・源泉', cluster:'main',
+    sanskrit:'Prema', kana:'プレマ', jp:'根源的愛', en:'Root Love' },
+  { family:'prema', cluster:'main',
+    sanskrit:'Śubhecchā', kana:'シュベーッチャー', jp:'善意', en:'Goodwill / Benevolence' },
+  { family:'prema', cluster:'main',
+    sanskrit:'Saṃtoṣa', kana:'サントーシャ', jp:'知足', en:'Contentment' },
+  { family:'prema', cluster:'main',
+    sanskrit:'Sattvāpatti', kana:'サットヴァーパッティ', jp:'純質への到達', en:'Attainment of Pure Quality' },
+  { family:'prema', clusterLabel:'Gradations of Love / 愛のグラデーション', cluster:'sub',
+    sanskrit:'Bhakti', kana:'バクティ', jp:'献身', en:'Devotion' },
+  { family:'prema', cluster:'sub',
+    sanskrit:'Karuṇā', kana:'カルナー', jp:'慈悲', en:'Compassion' },
+  { family:'prema', cluster:'sub',
+    sanskrit:'Sneha', kana:'スネーハ', jp:'親愛', en:'Affection' },
+  { family:'prema', cluster:'sub',
+    sanskrit:'Anurāga', kana:'アヌラーガ', jp:'愛着', en:'Attachment / Longing' },
+  { family:'prema', cluster:'sub',
+    sanskrit:'Maitrī', kana:'マイトリー', jp:'慈しみ', en:'Loving-kindness' },
+  { family:'prema', cluster:'sub',
+    sanskrit:'Ānanda', kana:'アーナンダ', jp:'至福', en:'Bliss' },
+
+  { family:'dharma', familyLabel:'Dharma Family', familyDesc:'Duty · Destiny · Spine / 義務・宿命・背骨', cluster:'main',
+    sanskrit:'Dharma', kana:'ダルマ', jp:'法・本分', en:'Law / Duty' },
+  { family:'dharma', cluster:'main',
+    sanskrit:'Karma', kana:'カルマ', jp:'行為・業', en:'Action / Deed' },
+  { family:'dharma', cluster:'main',
+    sanskrit:'Brahmacarya', kana:'ブラフマチャリヤ', jp:'梵行', en:'Brahmic Conduct' },
+  { family:'dharma', cluster:'main',
+    sanskrit:'Tapas', kana:'タパス', jp:'苦行・熱', en:'Austerity / Inner Heat' },
+  { family:'dharma', clusterLabel:'Axes of Righteousness / 正しさを支える軸', cluster:'sub',
+    sanskrit:'Satya', kana:'サティヤ', jp:'真実', en:'Truth' },
+  { family:'dharma', cluster:'sub',
+    sanskrit:'Vrata', kana:'ヴラタ', jp:'誓願', en:'Vow / Sacred Pledge' },
+  { family:'dharma', cluster:'sub',
+    sanskrit:'Śraddhā', kana:'シュラッダー', jp:'信頼・信', en:'Faith / Trust' },
+  { family:'dharma', cluster:'sub',
+    sanskrit:'Nīti', kana:'ニーティ', jp:'ニーティ（倫理）', en:'Ethics / Right Policy' },
+  { family:'dharma', cluster:'sub',
+    sanskrit:'Ahiṃsā', kana:'アヒンサー', jp:'非暴力', en:'Non-violence' },
+  { family:'dharma', cluster:'sub',
+    sanskrit:'Sevā', kana:'セーヴァー', jp:'奉仕', en:'Selfless Service' },
+
+  { family:'nila', familyLabel:'Nīla-kaṇṭha Family', familyDesc:'Acceptance · Transmutation · Purification / 受容・変換・浄化', cluster:'main',
+    sanskrit:'Nīla-kaṇṭha', kana:'ニーラカンタ', jp:'毒の受容と変換', en:'Transmutation' },
+  { family:'nila', cluster:'main',
+    sanskrit:'Nirodha', kana:'ニローダ', jp:'止滅', en:'Cessation / Restraint' },
+  { family:'nila', cluster:'main',
+    sanskrit:'Tanu-mānasā', kana:'タヌマーナサー', jp:'微細化', en:'Subtilization of Mind' },
+  { family:'nila', cluster:'main',
+    sanskrit:'Māyā', kana:'マーヤー', jp:'生命の躍動・生成変化', en:'Creative Power' },
+  { family:'nila', clusterLabel:'Prāṇāyāma / 呼吸・調律', cluster:'sub',
+    sanskrit:'Prāṇāyāma', kana:'プラーナーヤーマ', jp:'呼吸・調律', en:'Breath Control' },
+  { family:'nila', cluster:'sub',
+    sanskrit:'Prāṇa', kana:'プラーナ', jp:'生命力', en:'Life Force' },
+  { family:'nila', cluster:'sub',
+    sanskrit:'Kumbhaka', kana:'クンバカ', jp:'保息', en:'Breath Retention' },
+  { family:'nila', cluster:'sub',
+    sanskrit:'Pūraka / Recaka', kana:'プーラカ／レーチャカ', jp:'吸気・呼気', en:'Inhalation / Exhalation' },
+
+  { family:'sthita', familyLabel:'Sthitaprajña Family', familyDesc:'Intelligence · Stillness · Unmoved / 知性・静止・不動', cluster:'main',
+    sanskrit:'Sthitaprajña', kana:'スティタプラジュニャ', jp:'確立された知性', en:'Steady Wisdom' },
+  { family:'sthita', cluster:'main',
+    sanskrit:'Akartṛtva', kana:'アカルトリトゥヴァ', jp:'非行為', en:'Non-doership' },
+  { family:'sthita', cluster:'main',
+    sanskrit:'Vicāraṇā', kana:'ヴィチャーラナー', jp:'探求', en:'Inquiry / Discernment' },
+  { family:'sthita', cluster:'main',
+    sanskrit:'Avikalpa', kana:'アヴィカルパ', jp:'無分別', en:'Non-conceptual Awareness' },
+  { family:'sthita', clusterLabel:'Truth and Wisdom / 真理と智慧', cluster:'sub',
+    sanskrit:'Prajñā', kana:'プラジュニャー', jp:'最高の智慧', en:'Supreme Wisdom' },
+  { family:'sthita', cluster:'sub',
+    sanskrit:'Tattva', kana:'タットヴァ', jp:'原理', en:'Principle / Reality' },
+  { family:'sthita', cluster:'sub',
+    sanskrit:'Ātman', kana:'アートマン', jp:'自己', en:'Self / Soul' },
+
+  { family:'rta', familyLabel:'Ṛta Family', familyDesc:'Order · Solidarity · Harmony / 秩序・連帯・究極の調和', cluster:'main',
+    sanskrit:'Ṛta', kana:'リタ', jp:'宇宙の秩序', en:'Cosmic Order' },
+  { family:'rta', cluster:'main',
+    sanskrit:'Loka-saṃgraha', kana:'ローカサングラハ', jp:'世界の保持', en:'Welfare of the World' },
+  { family:'rta', cluster:'main',
+    sanskrit:'Samādhi', kana:'サマーディ', jp:'三昧', en:'Meditative Absorption' },
+  { family:'rta', cluster:'main',
+    sanskrit:'Kaivalya', kana:'カイヴァリヤ', jp:'独存', en:'Liberation' },
+  { family:'rta', cluster:'main',
+    sanskrit:'Śūnyatā', kana:'シューニャター', jp:'空', en:'Emptiness / Void' },
+  { family:'rta', cluster:'main',
+    sanskrit:'Pratītyasamutpāda', kana:'プラティーティヤサムトパーダ', jp:'縁起', en:'Dependent Origination' },
+  { family:'rta', clusterLabel:'Vāc — Expression / 言語と顕現', cluster:'sub',
+    sanskrit:'Vāc', kana:'ヴァーク', jp:'創造的言語力', en:'Creative Speech' },
+  { family:'rta', cluster:'sub',
+    sanskrit:'Mantra', kana:'マントラ', jp:'マントラ', en:'Sacred Vibration' },
+  { family:'rta', cluster:'sub',
+    sanskrit:'Śābda / Artha / Nāma', kana:'シャーブダ／アルタ／ナーマ', jp:'音・意味・名', en:'Sound / Meaning / Name' },
+];
+
+const FAMILIES = ['prema','dharma','nila','sthita','rta'];
+const TOTAL = DATA.length;
+let mastered = new Set();
+let currentFilter = 'all';
+
+function buildUI() {
+  const main = document.getElementById('main-content');
+  main.innerHTML = '';
+  document.getElementById('total-count').textContent = TOTAL;
+
+  FAMILIES.forEach(fam => {
+    const items = DATA.filter(d => d.family === fam);
+    if (!items.length) return;
+    if (currentFilter !== 'all' && currentFilter !== fam) return;
+
+    const section = document.createElement('div');
+    section.className = 'family-section';
+    section.dataset.family = fam;
+
+    const title = document.createElement('div');
+    title.className = 'family-title';
+    title.textContent = items.find(i => i.familyLabel)?.familyLabel || fam;
+    const desc = document.createElement('div');
+    desc.className = 'family-desc';
+    desc.textContent = items.find(i => i.familyDesc)?.familyDesc || '';
+    section.appendChild(title);
+    section.appendChild(desc);
+
+    const mainItems = items.filter(i => i.cluster === 'main');
+    const mainGrid = document.createElement('div');
+    mainGrid.className = 'cards-grid';
+    mainItems.forEach(item => mainGrid.appendChild(makeCard(item, fam)));
+    section.appendChild(mainGrid);
+
+    const subItems = items.filter(i => i.cluster === 'sub');
+    if (subItems.length) {
+      const clusterLabelText = subItems.find(i => i.clusterLabel)?.clusterLabel || 'Sub-cluster';
+      const lbl = document.createElement('div');
+      lbl.className = 'cluster-label';
+      lbl.textContent = clusterLabelText;
+      section.appendChild(lbl);
+      const subGrid = document.createElement('div');
+      subGrid.className = 'cards-grid sub';
+      subItems.forEach(item => subGrid.appendChild(makeCard(item, fam)));
+      section.appendChild(subGrid);
+    }
+    main.appendChild(section);
+  });
+}
+
+function makeCard(item, fam) {
+  const wrap = document.createElement('div');
+  wrap.className = 'card-wrap' + (mastered.has(item.sanskrit) ? ' mastered' : '');
+  wrap.dataset.sanskrit = item.sanskrit;
+  wrap.innerHTML = `
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <div class="c-sanskrit">${item.sanskrit}</div>
+        <div class="c-kana">${item.kana}</div>
+        <div class="c-hint">tap to reveal</div>
+      </div>
+      <div class="card-face card-back">
+        <div class="c-jp">${item.jp}</div>
+        <div class="c-en">${item.en}</div>
+        <button class="master-btn" data-sanskrit="${item.sanskrit}">
+          ${mastered.has(item.sanskrit) ? '✓ Learned' : 'Mastered'}
+        </button>
+      </div>
+    </div>`;
+
+  wrap.addEventListener('click', (e) => {
+    if (e.target.classList.contains('master-btn')) return;
+    wrap.classList.toggle('flipped');
+  });
+
+  wrap.querySelector('.master-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const s = item.sanskrit;
+    if (mastered.has(s)) mastered.delete(s);
+    else mastered.add(s);
+    wrap.classList.toggle('mastered', mastered.has(s));
+    wrap.querySelector('.master-btn').textContent = mastered.has(s) ? '✓ Learned' : 'Mastered';
+    updateProgress();
+  });
+  return wrap;
+}
+
+function updateProgress() {
+  const n = mastered.size;
+  document.getElementById('prog-text').textContent = `${n} / ${TOTAL}`;
+  document.getElementById('prog-fill').style.width = `${(n/TOTAL)*100}%`;
+}
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentFilter = tab.dataset.family;
+    buildUI();
+  });
+});
+
+document.getElementById('btn-expand').addEventListener('click', () => {
+  document.querySelectorAll('.card-wrap').forEach(c => c.classList.add('flipped'));
+});
+document.getElementById('btn-collapse').addEventListener('click', () => {
+  document.querySelectorAll('.card-wrap').forEach(c => c.classList.remove('flipped'));
+});
+document.getElementById('btn-reset').addEventListener('click', () => {
+  mastered.clear();
+  document.querySelectorAll('.card-wrap').forEach(c => {
+    c.classList.remove('mastered');
+    c.querySelector('.master-btn').textContent = 'Mastered';
+  });
+  updateProgress();
+});
+
+buildUI();
+updateProgress();
+</script>
+</body>
+</html>
