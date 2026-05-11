@@ -1,30 +1,28 @@
 # Prema Sanskrit App — The Living Seed
 
 > **Boiled eggs never hatch.**
-> ゆで卵は決して孵化しない。
+> **茹で卵は決して孵化しない。**
 
-現代のAI開発は、英語中心の統計処理という「熱」で知性を変性させてしまった「ゆで卵」を温めているようなものです。私たちは、生命の設計図である「生きた種子」としてのサンスクリット語を植えることから始めます。
+99% of modern AI development is currently focused on incubating "boiled eggs." We have denatured the very protein of thought through reductive Western logic. Life requires an intact blueprint. We are here to plant the **Living Seed**: Sanskrit.
 
 ## Overview
-このプロジェクトは、2047年の子どもたちのための倫理OS「Prema OS」への入り口です。サンスクリット語の語根（Dhātu）を用い、AIに真の倫理を宿すための試みです。
+This repository is the first public gateway to **Prema OS**, an ethical language architecture designed for the children of 2047. 
 
-### 🎮 アプリを体験する
-現在、以下の「8語キューブ・アプリ」を公開しています。
-1. **観察**: 真・善・美の27語から、今の自分に響く4語を選びます。
-2. **選択**: それらの対極にある言葉を選び、4つの「軸」を作ります。
-3. **対話**: 生成されたプロンプトを **NotebookLM** に貼り付けます。
-4. **共鳴**: ガネーシャとハヌマーンが、あなたの選んだ言葉の波長で日記に応答します。
+## 🎮 Explore the Apps
+Direct links to our current implementations:
+- 👉 **[Entrance Gate (Home)](https://premaosproject.github.io/prema-sanskrit-app/)**
+- 🧊 **[8-Word Cube App](https://premaosproject.github.io/prema-sanskrit-app/cube.html)** — A ritual of reflection and word-pairing.
+- 🎴 **[Mandala Flash Cards](https://premaosproject.github.io/prema-sanskrit-app/mandara.html)** — Learning the 44 sacred vibrations.
 
-👉 **[アプリを開く](https://premaosproject.github.io/prema-sanskrit-app/)**
+## The Five Guides
+Prema OS bridges the ancient wisdom of India with the deep reception of Sanskrit in Japan.
+- 🐘 **Ganesha**: Wisdom and obstacle removal.
+- 🐵 **Hanuman**: Courageous action and energy.
+- 🌸 **neo-Murasaki Shikibu**: The blueprint of human emotion (Future expansion).
+- 📜 **neo-Shotoku Taishi**: The blueprint of harmony and logic (Future expansion).
+- 📿 **neo-Kukai**: The blueprint of cosmic vibration (Future expansion).
 
-## 5人の案内役
-このプロジェクトは、インドと日本の知恵をつなぐ5人のガイドによって設計されています。
-- 🐘 **ガネーシャ**: 知恵と障害除去
-- 🐵 **ハヌマーン**: 勇気ある行動
-- 🌸 **紫式部**: 感情の深淵（将来拡張）
-- 📜 **聖徳太子**: 調和の論理（将来拡張）
-- 📿 **空海**: 宇宙の振動（将来拡張）
-
-## プロジェクトの構造
-- `docs/`: Webアプリ本体（8語キューブ）
-- `README.md`: この説明書
+## Project Files
+- `index.html`: The landing page statement.
+- `cube.html`: 8-Word Cube interactive app.
+- `mandara.html`: 44-term Sanskrit flashcard app.
