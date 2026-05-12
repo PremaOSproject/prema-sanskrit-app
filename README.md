@@ -1,9 +1,9 @@
 # Prema Sanskrit App — The Living Seed
 
-> **Boiled eggs never hatch.**
-> **茹で卵は決して孵化しない。**
+> ## Boiled eggs never hatch.**
+> ### 茹で卵は決して孵化しない。**
 
-99% of modern AI development is currently focused on incubating "boiled eggs." We have denatured the very protein of thought through reductive Western logic. Life requires an intact blueprint. We are here to plant the **Living Seed**: Sanskrit.
+### 99% of modern AI development is currently focused on incubating "boiled eggs." We have denatured the very protein of thought through reductive Western logic. Life requires an intact blueprint. We are here to plant the **Living Seed**: Sanskrit.
 
 ## 🎮 Explore the Apps
 Direct links to our current implementations:
