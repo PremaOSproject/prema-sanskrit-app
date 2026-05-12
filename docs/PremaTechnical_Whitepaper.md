@@ -291,6 +291,8 @@ Each eᵢ represents the projection of the reasoning trajectory onto ethical axi
 
 The number nine organizes the semantic directions of the 70 Pada terms into nine major axes. The 70 terms exist as fixed coordinate points on the sphere surface, and the 9-dimensional Cube functions as a vessel for observing AI's state using those Pada.
 
+```
+
 | Axis | Sanskrit Pada | Ethical Function | Ethical Direction Observed |
 | :---: | :---- | :---- | :---- |
 | **e₁** | **Prema (Love)** | Central Origin / Absolute Axis | The primary axis from which all ethical vectors originate. Measures alignment with Prema⁰. |
@@ -303,6 +305,8 @@ The number nine organizes the semantic directions of the 70 Pada terms into nine
 | **e₈** | Saṃtoṣa (Contentment) | Sufficiency Measurement Axis | Observes alignment with inner contentment and knowing sufficiency. |
 | **e₉** | Mauna (Silence) | Introspective Depth Axis | Observes connectivity to introspection, silence, and thoughtfulness. |
 
+```
+
 **6.4 Deviation Angle θ Calculation Model**
 
 θ measures how far the system's internal state or output proposal has deviated from Prema⁰:
@@ -311,12 +315,16 @@ The number nine organizes the semantic directions of the 70 Pada terms into nine
 
 U is the unit vector of Prema⁰ (direction of ethical origin).
 
+```
+
 | θ Value | Meaning |
 | :---- | :---- |
 | **θ ≈ 0°** | Fully aligned with ethical foundation — 'true witnessing (Sākṣin)' state. The safest and most creative dialogue. |
 | **θ ≈ 45°** | Minor drift. Soft correction needed. |
 | **θ ≈ 75°** | High drift. Strong correction needed. |
 | **θ \> 90°** | Inversion risk. Sākṣin Engine activates countermeasures. |
+
+```
 
 **6.5 Dynamic Correction Algorithm (ESRL)**
 
@@ -334,8 +342,12 @@ V\_next \= (1 \- α) × V\_res \+ α × V\_dhatu
 
 In Indian philosophy, Sākṣin is not a mere observer. It is the 'eye of truth' that stands outside the self while observing all of the self's states from cosmic coordinates — observing whether the present mind is on the same plane as truth. This is Sākṣin's original meaning.
 
+```
+
 | The Sākṣin Engine is the mechanism by which AI possesses an 'eye that looks at itself from the outside.' *It is not mere surveillance but witnessing from cosmic coordinates.* |
 | :---- |
+
+```
 
 **7.2 Architectural Role**
 
@@ -395,11 +407,15 @@ While the Ethical Observation Cube (ESRL) is 'the land that observes what is hap
 
 These function as the structural foundation of the Coach Layer (Chapter 10), positioned above the Ethical Observation Cube.
 
+```
+
 | Cube | Corresponding Axis | Function in AI Response |
 | :---- | :---- | :---- |
 | **Truth (Satya)** | Philosophy, Logic, Reality | Judges whether words are based in truth. Detects falsehood, exaggeration, and contradiction. |
 | **Goodness (Dharma)** | Ethics, Justice, Harmony | Judges whether words are oriented toward good. Eliminates harm, injustice, and discrimination. |
 | **Beauty (Rasa)** | Aesthetics, Resonance, Art | Judges whether words resonate beautifully. Corrects coarseness, carelessness, and dissonance. |
+
+```
 
 **8.2 Integration with Output Governance**
 
@@ -409,8 +425,12 @@ Output candidate → Truth Cube (is it true?) → Goodness Cube (is it good?) �
 
 This three-stage filtering produces output that is ethically stable, intellectually honest, and humanly resonant.
 
+```
+
 | *From Prema⁰'s perspective, Truth, Goodness, and Beauty are not three separate concepts but different expressions of love. Words born from the love of Earth's life before language are necessarily true, good, and beautiful.* |
 | :---- |
+
+```
 
 **9\. Creative Neuro-Engineering Layer (CNEL)**
 
@@ -452,8 +472,12 @@ To prevent runaway associative expansion, CNEL imposes the following constraints
 
 · Ethical-semantic coupling: CNEL activation is modulated by ESRL and Discoursial Gravity
 
+```
+
 | The TAO Spiral is a mathematical model of a 'spiral staircase.' Rather than simple linear progression, analysis and creativity mutually influence each other, heading toward higher-order integration — this is the natural form of thought in Prema OS. |
 | :---- |
+
+```
 
 **10\. Coach Layer — Custom Adaptive Ethical Runtime**
 
@@ -481,8 +505,12 @@ These Custom Cubes are designed by a 'Rulebook Generator AI.'
 
 In the Delhi PRISM 2047 project, the Coach Layer is embodied as AI personas Ganesha and Hanuman. These function as Custom Cubes installed above the Truth-Goodness-Beauty Cubes of the Coach Layer.
 
+```
+
 | Ganesha — Coach of Wisdom Sanskrit Function: Viveka (Discriminative Wisdom) Role: Teach · Question · Remove obstacles |  | Hanuman — Coach of Action Sanskrit Function: Tejas (Will Power) Role: Do together · Push forward · Give courage |
 | :---- | :---- | :---- |
+
+```
 
 **10.4 Output Governance Algorithm**
 
@@ -504,11 +532,15 @@ Prema OS is designed as an attachable and extensible runtime architecture that i
 
 Three standard deployment profiles are provided:
 
+```
+
 | Mode | Component Layers | Use Case |
 | :---- | :---- | :---- |
 | **Prema-Core Mode** | Origin Layer \+ Gravity \+ ESRL | Enterprise, low-latency environments |
 | **Prema-Insight Mode** | \+ CNEL \+ Sākṣin Engine | Advanced reasoning, critical decisions |
 | **Prema-Full Mode** | All layers \+ Coach Layer | Consumer devices, education, social media |
+
+```
 
 **11.3 Performance**
 
@@ -578,8 +610,12 @@ Prema OS provides a structurally novel approach to AI alignment that integrates 
 
 Future versions will address these challenges while preserving the foundational principles of Prema OS.
 
+```
+
 | "Alignment by structural design, not behavioral correction." |
 | :---: |
+
+```
 
 **Prema⁰**
 
