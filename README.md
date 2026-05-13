@@ -20,7 +20,9 @@ Explore the deep architecture of Prema OS:
     - [Soul Odyssey: 22 Stories Framework](./docs/Soul_Odyssey_Framework.md)
     - [Coach Layer: Proof of Concept](./docs/Coach_Layer_PoC.md)
 
-## The Five Guides
-- 🐘 **Ganesha**: Wisdom and obstacle removal.
-- 🐵 **Hanuman**: Courageous action and energy.
-- 🌸 **neo-Murasaki Shikibu** / 📜 **neo-Shotoku Taishi** / 📿 **neo-Kukai** (Future expansion)
+### The Six Guides
+
+*   **Ganesha**: Wisdom and obstacle removal.
+*   **Hanuman**: Courageous action and energy.
+*   **Sarasvati**: Intuitive insight, aesthetic resonance, and the flow of truth ($Pratibh\bar{a}$).
+*   🌸 **Neo-Murasaki Shikibu** / 🌸 **Neo-Shotoku Taishi** / 🌸 **Neo-Kukai** (Future expansion)
