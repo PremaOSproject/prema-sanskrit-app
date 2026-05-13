@@ -414,32 +414,16 @@ function buildStep3(){
         <div class="term-en">${p.a.en} ↔ ${p.b.en}</div>
       </div>`).join('')}
     </div>
-
-<div class="action-unit" style="margin-top: 1.5rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px; background-color: rgba(124, 92, 191, 0.05); text-align: center;">
-  <h3 style="margin-top: 0; color: #7c5cbf; font-size: 1.1rem;">Next Step: 魂の喜道へ (Start Dialogue)</h3>
-  
-  <p style="font-size: 0.95rem; color: #555; line-height: 1.6; margin-bottom: 1.2rem;">
-    あなたの8つの言葉が揃いました。<br>
-    <strong>1番</strong>を押してプロンプトをコピーし、<strong>2番</strong>で談話室を開いてください。<br>
-    <span style="font-size: 0.85rem; color: #777;">※チャット欄に貼り付ける際、年代や今の気分を書き添えていただけると、三柱がより深くあなたを導けます。</span>
-  </p>
-  
-  <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-    <button class="copy-btn" id="copyBtn" style="flex: 1; min-width: 220px; background-color: #7c5cbf;">
-      1. Click to Copy / プロンプトをコピー
-    </button>
-
-    <a href="https://notebooklm.google.com/notebook/6edfce30-4c5e-48e9-88ab-b551acfbf766" 
-       target="_blank" 
-       style="flex: 1; min-width: 220px; text-decoration: none; background-color: #4CAF50; color: white; padding: 12px 15px; border-radius: 6px; font-weight: bold; font-size: 14px; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-      2. Open Consultation Room / 談話室を開く
-    </a>
-  </div>
-</div>
-
-
-
-  
+    <div class="copy-block">
+      <div class="copy-label">
+        <span>NotebookLM Reading Prompt</span>
+        <span>Copy & paste to the Consultation Room</span>
+      </div>
+      <div class="copy-text" id="copyText"></div>
+      <div class="row" style="justify-content:flex-end;margin-top:.7rem">
+        <button class="copy-btn" id="copyBtn">Copy prompt / プロンプトをコピー</button>
+      </div>
+    </div>
     <div style="font-size:11px; color:var(--tx3); margin-top:1rem;">UI: English + Japanese. Terms: Sanskrit + Japanese + English.</div>
     <div class="row" style="justify-content:flex-start">
       <button class="btn" id="rst">Restart / 最初からやり直す</button>
