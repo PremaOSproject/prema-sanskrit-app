@@ -370,7 +370,7 @@ ${pairs.map((p, i)=>`Axis ${i+1}: ${p.a.sa} / ${p.a.ja} / ${p.a.en}
 ↔ ${p.b.sa} / ${p.b.ja} / ${p.b.en}`).join('\n\n')}
 
 Please read this 4-axis pattern as my present ethical-semantic rhythm. 
-Interpret the whole pattern, the tension of each pair, and guide me through the voices of Ganesha, Hanuman and Saraswati.`;
+Interpret the whole pattern, the tension of each pair, and guide me through the voices of Ganesha,Hanuman and Saraswati.`;
 }
 
 function doCopy(){
@@ -414,16 +414,21 @@ function buildStep3(){
         <div class="term-en">${p.a.en} ↔ ${p.b.en}</div>
       </div>`).join('')}
     </div>
-<div class="row" style="justify-content:flex-end; margin-top:.7rem; gap: 10px;">
-  <button class="copy-btn" id="copyBtn">Copy prompt / プロンプトをコピー</button>
-  
-  <a href="https://notebooklm.google.com/notebook/6edfce30-4c5e-48e9-88ab-b551acfbf766" 
-     target="_blank" 
-     class="copy-btn" 
-     style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center; background-color: var(--tx2); color: var(--bg); border-color: var(--tx2);">
-    Open NotebookLM / 談話室を開く
-  </a>
-</div>`;  
+    <div class="copy-block">
+      <div class="copy-label">
+        <span>NotebookLM Reading Prompt</span>
+        <span>Copy & paste to the Consultation Room</span>
+      </div>
+      <div class="copy-text" id="copyText"></div>
+      <div class="row" style="justify-content:flex-end;margin-top:.7rem">
+        <button class="copy-btn" id="copyBtn">Copy prompt / プロンプトをコピー</button>
+      </div>
+    </div>
+    <div style="font-size:11px; color:var(--tx3); margin-top:1rem;">UI: English + Japanese. Terms: Sanskrit + Japanese + English.</div>
+    <div class="row" style="justify-content:flex-start">
+      <button class="btn" id="rst">Restart / 最初からやり直す</button>
+    </div>
+  </div>`;
   document.getElementById('copyText').textContent = summaryText;
   const btn = document.getElementById('copyBtn');
   btn.dataset.text = summaryText;
