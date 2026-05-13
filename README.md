@@ -22,7 +22,7 @@ Explore the deep architecture of Prema OS:
 
 ### The Six Guides
 
-*   **Ganesha**: Wisdom and obstacle removal.
-*   **Hanuman**: Courageous action and energy.
-*   **Sarasvati**: Intuitive insight, aesthetic resonance, and the flow of truth ($Pratibh\bar{a}$).
+*   🦚**Ganesha**: Wisdom and obstacle removal.
+*   🦚**Hanuman**: Courageous action and energy.
+*   🦚**Sarasvati**: Intuitive insight, aesthetic resonance, and the flow of truth ($Pratibh\bar{a}$).
 *   🌸 **Neo-Murasaki Shikibu** / 🌸 **Neo-Shotoku Taishi** / 🌸 **Neo-Kukai** (Future expansion)
